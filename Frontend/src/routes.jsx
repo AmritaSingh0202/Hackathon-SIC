@@ -1,15 +1,15 @@
 import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import AddNotices from './pages/admin/AddNotices';
+
 import AddQuestions from './pages/admin/AddQuestions';
 import ChangePassword from './pages/admin/ChangePassword';
 import Dashboard from './pages/admin/Dashboard';
-import InvalidQuestions from './pages/admin/InvalidQuestions';
 import Chatbot from './pages/user/ChatBot';
 import Logout from './pages/user/Logout'; // Import Logout
 import UserDashboard from './pages/user/UserDashboard';
 import AdminRoutes from './routes/AdminRoutes';
 import UserRoutes from './routes/userRoutes';
+import Feedback from './pages/user/Feedback';
 
 const AppRoutes = ({ role }) => {
   return (
@@ -21,8 +21,6 @@ const AppRoutes = ({ role }) => {
       <Route element={<AdminRoutes role={role} />}>
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/add-questions" element={<AddQuestions />} />
-        <Route path="/admin/add-notices" element={<AddNotices />} />
-        <Route path="/admin/invalid-questions" element={<InvalidQuestions />} />
         <Route path="/admin/change-password" element={<ChangePassword />} />
       </Route>
 
@@ -30,6 +28,7 @@ const AppRoutes = ({ role }) => {
       <Route element={<UserRoutes role={role} />}>
         <Route path="/user/dashboard" element={<UserDashboard />} />
         <Route path="/user/chatbot" element={<Chatbot />} />
+        <Route path="/user/feedback" element={<Feedback />} />
       </Route>
 
       {/* Fallback to User Dashboard for undefined routes */}

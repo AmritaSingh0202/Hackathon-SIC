@@ -42,7 +42,7 @@ function Login({ setRole }) { // Accept setRole as a prop
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-green-100">
       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md">
         <h2 className="text-2xl font-bold mb-4">Login</h2>
         <div className="mb-4">

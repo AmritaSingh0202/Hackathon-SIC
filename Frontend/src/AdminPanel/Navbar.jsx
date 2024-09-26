@@ -12,11 +12,17 @@ const Navbar = ({ role }) => {
 
 const styles = {
   navbar: {
+    position: 'fixed',          // Make the navbar fixed
+    top: '0',                  // Align to the top
+    left: '0',                 // Align to the left
+    right: '0',                // Align to the right
     display: 'flex',
     justifyContent: 'space-between',
     padding: '1rem',
     backgroundColor: '#333',
-    color: '#fff'
+    color: '#fff',
+    zIndex: 1000,              // Ensure it's above other elements
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)', 
   }
 };
 
